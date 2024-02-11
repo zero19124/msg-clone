@@ -28,6 +28,8 @@ const Body: React.FC<BodyProps> = ({ initialMessages = [] }) => {
     bottomRef?.current?.scrollIntoView();
 
     const messageHandler = (message: FullMessageType) => {
+    console.log("message1");
+
       axios.post(`/api/conversations/${conversationId}/seen`);
 
       setMessages((current) => {
